@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:id="@+id/recipie_entry_name"
+        android:hint="name"
+        android:inputType="text"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"/>
+
+    <Spinner
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/recipie_entry_price"
+        android:layout_alignParentEnd="true">
+
+    </Spinner>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipie_entry_ingredients"
+        android:inputType="textMultiLine"
+        android:hint="Ingredients"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/recipie_entry_name"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipie_entry_preparation"
+        android:hint="Preparation"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/recipie_entry_ingredients"
+        android:layout_marginTop="40dp"
+        android:inputType="textLongMessage"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/recipie_entry_save"
+        android:text="Save"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/recipie_entry_preparation"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
