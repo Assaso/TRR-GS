@@ -60,8 +60,14 @@ public class MainActivity extends AppCompatActivity {
         randomize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, randomize.class);
-                startActivity(intent);
+                String files[] = fileList();
+                if (files.length == 0) {
+                    Toast toast = Toast.makeText(MainActivity.this, "No items found to show", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    Intent intent = new Intent(MainActivity.this, explore.class);
+                    startActivity(intent);
+                }
             }
         });
 
