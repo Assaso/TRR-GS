@@ -21,13 +21,30 @@
     </Spinner>
 
     <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/recipie_entry_add_i"
+        android:hint="Ingredient"
+        android:layout_below="@+id/recipie_entry_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/recipie_entry_add"
+        android:text="+"
+        android:textSize="30sp"
+        android:layout_below="@+id/recipie_entry_name"
+        android:layout_alignEnd="@+id/recipie_entry_add_i"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recipie_entry_ingredients"
-        android:inputType="textMultiLine"
-        android:hint="Ingredients"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/recipie_entry_name"
+        android:layout_below="@+id/recipie_entry_add_i"
         android:layout_marginTop="20dp"/>
 
     <EditText
