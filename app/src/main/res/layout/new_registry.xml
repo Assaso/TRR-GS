@@ -25,6 +25,7 @@
         android:layout_height="60dp"
         android:id="@+id/recipie_entry_add_i"
         android:hint="Ingredient"
+        android:inputType="text"
         android:layout_below="@+id/recipie_entry_name"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"/>

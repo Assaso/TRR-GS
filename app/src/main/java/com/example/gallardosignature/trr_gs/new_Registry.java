@@ -2,8 +2,10 @@ package com.example.gallardosignature.trr_gs;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
@@ -52,6 +55,19 @@ public class new_Registry extends AppCompatActivity {
 
         entry_archive = fileList();
         int start_number = entry_archive.length;
+
+        String path = getFilesDir().toString()+"/recipie_list000.txt";
+        File file = new File(path);
+        if(file.exists()){
+        }else {
+            try {
+                OutputStreamWriter osw = new OutputStreamWriter(openFileOutput("recipie_list000.txt", Context.MODE_PRIVATE));
+                osw.write("");
+                osw.close();
+            } catch (Exception exe) {
+                Log.e("Error", "at write file");
+            }
+        }
 
         if (start_number <= 9) {
             file_number = "00" + start_number;

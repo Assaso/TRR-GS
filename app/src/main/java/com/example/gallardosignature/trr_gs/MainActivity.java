@@ -38,18 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         label.setText(capitol);
 
-        String path = getFilesDir().toString()+"/recipie_list001.txt";
-        File file = new File(path);
-        if(file.exists()){
-        }else {
-            try {
-                OutputStreamWriter osw = new OutputStreamWriter(openFileOutput("recipie_list001.txt", Context.MODE_PRIVATE));
-                osw.write("001:");
-                osw.close();
-            } catch (Exception exe) {
-                Log.e("Error", "at write file");
-            }
-        }
 
         registry.setOnClickListener(new View.OnClickListener() {
             @Override
