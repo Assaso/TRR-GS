@@ -24,6 +24,10 @@
         <activity android:name=".randomize">
 
         </activity>
+
+        <activity android:name=".explore">
+
+        </activity>
     </application>
 
 </manifest>
